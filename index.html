@@ -11,41 +11,33 @@
 }
 
 body {
-  background-color: #e6f2ff;
+  background-color: lightblue; /* your original color */
   font-family: Arial, sans-serif;
   margin: 0;
 }
 
-/* ================= HEADER ================= */
-.header {
-  text-align: center;
-  padding: 20px;
-  background-color: #003366;
-  color: white;
-}
-
 /* ================= NAVIGATION ================= */
 .topnav {
-  background-color: #003366;
+  background-color: black; /* original */
   overflow: hidden;
 }
 
 .topnav a {
   float: left;
-  display: block;
   color: white;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 .topnav a:hover {
-  background-color: #0059b3;
+  background-color: #333333;
 }
 
 .topnav a.active {
-  background-color: #0059b3;
+  background-color: #333333;
 }
 
+/* Dropdown */
 .dropdown {
   float: left;
   overflow: hidden;
@@ -71,11 +63,10 @@ body {
 
 .dropdown-content a {
   float: none;
-  color: #003366;
+  color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  text-align: left;
 }
 
 .dropdown-content a:hover {
@@ -84,10 +75,6 @@ body {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.topnav .icon {
-  display: none;
 }
 
 /* ================= SLIDESHOW ================= */
@@ -103,7 +90,7 @@ body {
 
 .mySlides img {
   width: 100%;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
 .text {
@@ -127,7 +114,7 @@ body {
 }
 
 .dot.active {
-  background-color: #003366;
+  background-color: black;
 }
 
 /* ================= CONTENT ================= */
@@ -136,20 +123,11 @@ body {
   max-width: 900px;
   margin: auto;
   background-color: white;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
 .content img {
   width: 100%;
-  margin-top: 20px;
-}
-
-/* ================= FOOTER ================= */
-.footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #003366;
-  color: white;
   margin-top: 20px;
 }
 
@@ -166,21 +144,16 @@ body {
 
 <body>
 
-<div class="header">
-  <h1>Photo Page</h1>
-</div>
-
-<!-- Navigation -->
 <div class="topnav">
   <a class="active" href="index.html">Photo Page</a>
   <a href="page2.html">Description Page</a>
 
   <div class="dropdown">
-    <button class="dropbtn">More</button>
+    <button class="dropbtn">More ▼</button>
     <div class="dropdown-content">
       <a href="#">Software</a>
       <a href="#">Engineering</a>
-      <a href="#">Products</a>
+      <a href="#">Technology</a>
     </div>
   </div>
 </div>
@@ -188,19 +161,19 @@ body {
 <!-- Automatic Slideshow -->
 <div class="slideshow-container">
 
-  <div class="mySlides fade">
+  <div class="mySlides">
     <img src="slide1.jpg" alt="Slide 1">
     <div class="text">Software Systems</div>
   </div>
 
-  <div class="mySlides fade">
+  <div class="mySlides">
     <img src="slide2.jpg" alt="Slide 2">
     <div class="text">Engineered Products</div>
   </div>
 
-  <div class="mySlides fade">
+  <div class="mySlides">
     <img src="slide3.jpg" alt="Slide 3">
-    <div class="text">Technology Integration</div>
+    <div class="text">Modern Technology</div>
   </div>
 
 </div>
@@ -211,7 +184,7 @@ body {
   <span class="dot"></span>
 </div>
 
-<!-- Original Content (Kept) -->
+<!-- Your Original Content (kept) -->
 <div class="content">
   <h2>Software vs Engineered Product</h2>
 
@@ -219,16 +192,12 @@ body {
        alt="Software vs Engineered Product">
 
   <p>
-    This is the link below
+     This is the link below
   </p>
 
   <a href="https://www.linkedin.com/pulse/product-engineering-vs-software-development-core-differences-synergies-xhgqf/">
-    Visit the Source Website
+      Visit the Source Website
   </a>
-</div>
-
-<div class="footer">
-  <p>Responsive UI Project</p>
 </div>
 
 <script>
