@@ -16,7 +16,9 @@ body {
 /* ===== NAVIGATION ===== */
 .topnav {
   background-color: black;
-  overflow: hidden;
+  overflow: visible;          /* FIXED */
+  position: relative;
+  z-index: 1000;              /* Ensures nav stays above slideshow */
 }
 
 .topnav a {
@@ -37,7 +39,7 @@ body {
 /* ===== DROPDOWN ===== */
 .dropdown {
   float: left;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .dropdown .dropbtn {
@@ -55,6 +57,7 @@ body {
   position: absolute;
   background-color: white;
   min-width: 160px;
+  z-index: 2000;              /* Makes dropdown appear over images */
 }
 
 .dropdown-content a {
@@ -75,7 +78,7 @@ body {
 
 /* ===== SLIDESHOW ===== */
 .slideshow-container {
-  max-width: 900px;
+  max-width: 600px;           /* Smaller width */
   margin: 20px auto;
   position: relative;
 }
@@ -86,7 +89,8 @@ body {
 
 .mySlides img {
   width: 100%;
-  height: auto;
+  height: 350px;              /* Smaller height */
+  object-fit: cover;          /* Keeps image looking good */
 }
 
 .text {
