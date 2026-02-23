@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Photo Page</title>
+<title>Software Products</title>
 
 <style>
-/* ===== KEEPING YOUR ORIGINAL STYLES ===== */
+/* ===== YOUR ORIGINAL BLUE THEME ===== */
 body {
   background-color: lightblue;
   font-family: Arial, sans-serif;
   margin: 0;
 }
 
+/* ===== NAVIGATION ===== */
 .topnav {
   background-color: black;
   overflow: hidden;
@@ -33,7 +34,7 @@ body {
   background-color: #333333;
 }
 
-/* ===== DROPDOWN (ADDED FOR B/A LEVEL) ===== */
+/* ===== DROPDOWN ===== */
 .dropdown {
   float: left;
   overflow: hidden;
@@ -72,9 +73,9 @@ body {
   display: block;
 }
 
-/* ===== SLIDESHOW (REQUIRED) ===== */
+/* ===== SLIDESHOW ===== */
 .slideshow-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 20px auto;
   position: relative;
 }
@@ -96,7 +97,7 @@ body {
   bottom: 8px;
   width: 100%;
   text-align: center;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.5);
 }
 
 .dot {
@@ -112,26 +113,57 @@ body {
   background-color: black;
 }
 
-/* ===== CONTENT AREA ===== */
-.content {
-  background-color: white;
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
+/* ===== RESPONSIVE GRID ===== */
+* {
+  box-sizing: border-box;
 }
 
-.content img {
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
   width: 100%;
-  margin-top: 20px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media screen and (max-width: 600px) {
-  .topnav a, .dropdown .dropbtn {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+@media only screen and (min-width: 768px) {
+  .col-3 {width: 25%;}
+  .col-6 {width: 50%;}
+}
+
+/* ===== SIDEBAR & CONTENT ===== */
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: white;
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: white;
+  text-align: center;
+}
+
+.footer {
+  background-color: #0099cc;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
 </style>
 </head>
@@ -140,35 +172,35 @@ body {
 
 <!-- NAVIGATION -->
 <div class="topnav">
-  <a class="active" href="index.html">Photo Page</a>
-  <a href="page2.html">Description Page</a>
+  <a class="active" href="#">Software Products</a>
+  <a href="#">About</a>
 
   <div class="dropdown">
-    <button class="dropbtn">More ▼</button>
+    <button class="dropbtn">Categories ▼</button>
     <div class="dropdown-content">
-      <a href="#">Software</a>
-      <a href="#">Engineering</a>
-      <a href="#">Products</a>
+      <a href="#">Productivity</a>
+      <a href="#">Development</a>
+      <a href="#">Design</a>
     </div>
   </div>
 </div>
 
-<!-- AUTOMATIC SLIDESHOW -->
+<!-- SLIDESHOW -->
 <div class="slideshow-container">
 
   <div class="mySlides">
-    <img src="slide1.jpg" alt="Slide 1">
-    <div class="text">Software Systems</div>
+    <img src="software1.jpg" alt="Productivity Software">
+    <div class="text">Productivity Tools</div>
   </div>
 
   <div class="mySlides">
-    <img src="slide2.jpg" alt="Slide 2">
-    <div class="text">Engineered Products</div>
+    <img src="software2.jpg" alt="Development Software">
+    <div class="text">Development Platforms</div>
   </div>
 
   <div class="mySlides">
-    <img src="slide3.jpg" alt="Slide 3">
-    <div class="text">Technology Integration</div>
+    <img src="software3.jpg" alt="Design Software">
+    <div class="text">Creative Design Software</div>
   </div>
 
 </div>
@@ -179,20 +211,48 @@ body {
   <span class="dot"></span>
 </div>
 
-<!-- YOUR ORIGINAL CONTENT -->
-<div class="content">
-  <h2>Software vs Engineered Product</h2>
+<!-- MAIN CONTENT -->
+<div class="row">
 
-  <img src="https://media.licdn.com/dms/image/v2/D4D12AQFa03A8eh-5ng/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1705909799817?e=1770854400&v=beta&t=CjF61gVNmAb7AsWLyZrndnNT0S4JbuBFlk0-WqUaB9w"
-       alt="Software vs Engineered Product">
+  <div class="col-3 menu">
+    <ul>
+      <li>Microsoft Office</li>
+      <li>Adobe Creative Cloud</li>
+      <li>Visual Studio</li>
+      <li>Slack</li>
+    </ul>
+  </div>
 
-  <p>
-     This is the link below
-  </p>
+  <div class="col-6">
+    <h1>Software Products Overview</h1>
+    <p>
+      Software products are applications designed to solve problems,
+      increase productivity, and improve digital experiences.
+    </p>
 
-  <a href="https://www.linkedin.com/pulse/product-engineering-vs-software-development-core-differences-synergies-xhgqf/">
-      Visit the Source Website
-  </a>
+    <p>
+      Examples include office tools, design software,
+      programming environments, and collaboration platforms.
+    </p>
+  </div>
+
+  <div class="col-3">
+    <div class="aside">
+      <h2>Why Software?</h2>
+      <p>Improves efficiency</p>
+
+      <h2>Where Used?</h2>
+      <p>Business, Education, Industry</p>
+
+      <h2>Future?</h2>
+      <p>AI & Cloud Integration</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>© 2026 Software Products Website</p>
 </div>
 
 <!-- SLIDESHOW SCRIPT -->
@@ -218,7 +278,7 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 
-  setTimeout(showSlides, 2000);
+  setTimeout(showSlides, 3000);
 }
 </script>
 
