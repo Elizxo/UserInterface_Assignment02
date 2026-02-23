@@ -6,19 +6,15 @@
 <title>Photo Page</title>
 
 <style>
-* {
-  box-sizing: border-box;
-}
-
+/* ===== KEEPING YOUR ORIGINAL STYLES ===== */
 body {
-  background-color: lightblue; /* your original color */
+  background-color: lightblue;
   font-family: Arial, sans-serif;
   margin: 0;
 }
 
-/* ================= NAVIGATION ================= */
 .topnav {
-  background-color: black; /* original */
+  background-color: black;
   overflow: hidden;
 }
 
@@ -29,15 +25,15 @@ body {
   text-decoration: none;
 }
 
-.topnav a:hover {
-  background-color: #333333;
-}
-
 .topnav a.active {
   background-color: #333333;
 }
 
-/* Dropdown */
+.topnav a:hover {
+  background-color: #333333;
+}
+
+/* ===== DROPDOWN (ADDED FOR B/A LEVEL) ===== */
 .dropdown {
   float: left;
   overflow: hidden;
@@ -58,7 +54,6 @@ body {
   position: absolute;
   background-color: white;
   min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
 }
 
 .dropdown-content a {
@@ -77,7 +72,7 @@ body {
   display: block;
 }
 
-/* ================= SLIDESHOW ================= */
+/* ===== SLIDESHOW (REQUIRED) ===== */
 .slideshow-container {
   max-width: 800px;
   margin: 20px auto;
@@ -90,7 +85,7 @@ body {
 
 .mySlides img {
   width: 100%;
-  border-radius: 5px;
+  height: auto;
 }
 
 .text {
@@ -117,13 +112,12 @@ body {
   background-color: black;
 }
 
-/* ================= CONTENT ================= */
+/* ===== CONTENT AREA ===== */
 .content {
-  padding: 20px;
+  background-color: white;
   max-width: 900px;
   margin: auto;
-  background-color: white;
-  border-radius: 5px;
+  padding: 20px;
 }
 
 .content img {
@@ -131,7 +125,7 @@ body {
   margin-top: 20px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ===== RESPONSIVE ===== */
 @media screen and (max-width: 600px) {
   .topnav a, .dropdown .dropbtn {
     float: none;
@@ -144,6 +138,7 @@ body {
 
 <body>
 
+<!-- NAVIGATION -->
 <div class="topnav">
   <a class="active" href="index.html">Photo Page</a>
   <a href="page2.html">Description Page</a>
@@ -153,12 +148,12 @@ body {
     <div class="dropdown-content">
       <a href="#">Software</a>
       <a href="#">Engineering</a>
-      <a href="#">Technology</a>
+      <a href="#">Products</a>
     </div>
   </div>
 </div>
 
-<!-- Automatic Slideshow -->
+<!-- AUTOMATIC SLIDESHOW -->
 <div class="slideshow-container">
 
   <div class="mySlides">
@@ -173,7 +168,7 @@ body {
 
   <div class="mySlides">
     <img src="slide3.jpg" alt="Slide 3">
-    <div class="text">Modern Technology</div>
+    <div class="text">Technology Integration</div>
   </div>
 
 </div>
@@ -184,7 +179,7 @@ body {
   <span class="dot"></span>
 </div>
 
-<!-- Your Original Content (kept) -->
+<!-- YOUR ORIGINAL CONTENT -->
 <div class="content">
   <h2>Software vs Engineered Product</h2>
 
@@ -200,6 +195,7 @@ body {
   </a>
 </div>
 
+<!-- SLIDESHOW SCRIPT -->
 <script>
 let slideIndex = 0;
 showSlides();
